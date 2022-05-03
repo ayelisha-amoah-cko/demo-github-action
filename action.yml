@@ -4,4 +4,4 @@ author: 'Ayelisha Amoah <ayelisha.amoah@checkout.com>'
 
 runs: 
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'
