@@ -6015,13 +6015,15 @@ function descending(a, b)
 const axios = __webpack_require__(53);
 const core = __webpack_require__(393);
 
+const DEFAULT_CHARACTER = "dr-zoidberg";
+
 async function run() {
-  const character = core.getInput("character");
+  const character = core.getInput("character") || DEFAULT_CHARACTER;
 
   console.log(character);
 
   const response = await axios.get(
-    "https://futuramaapi.herokuapp.com/api/characters/dr-zoidberg/1"
+    `https://futuramaapi.herokuapp.com/api/characters/${character}/1`
   );
 
   const { data } = response;
