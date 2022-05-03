@@ -6017,8 +6017,15 @@ const core = __webpack_require__(393);
 
 const DEFAULT_CHARACTER = "dr-zoidberg";
 
+const AVAILABLE_CHARACTERS = ["bender", "fry", "leela", "dr-zoidberg"];
+
 async function run() {
   const character = core.getInput("character") || DEFAULT_CHARACTER;
+
+  if (!AVAILABLE_CHARACTERS.includes(character)) {
+    core.setFailed(`Unknown character: ${character}`);
+    return;
+  }
 
   console.log(character);
 
@@ -6028,6 +6035,7 @@ async function run() {
 
   const { data } = response;
   const firstEntry = data[0];
+
   console.log(`${firstEntry.character}: ${firstEntry.quote}`);
 
   core.setOutput("quote", firstEntry);
