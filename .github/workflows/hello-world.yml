@@ -12,4 +12,4 @@ jobs:
         with:
           character: bender
         id: futurama
-      - run: ${{steps.futurama.outputs.quote}}
+      - run: echo ${{steps.futurama.outputs.quote}}
