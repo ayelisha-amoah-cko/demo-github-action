@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ayelisha-amoah-cko/demo-github-action#readme",
   "devDependencies": {
+    "@actions/core": "^1.7.0",
     "@zeit/ncc": "^0.22.3",
     "axios": "^0.27.2"
   }

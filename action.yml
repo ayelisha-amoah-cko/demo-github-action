@@ -2,6 +2,11 @@ name: 'Hello World'
 description: 'Saying hello to the world'
 author: 'Ayelisha Amoah <ayelisha.amoah@checkout.com>'
 
+inputs:
+  character: 
+    description: 'Futurama character'
+    default: 'dr-zoidberg'
+
 runs: 
   using: 'node12'
   main: 'dist/index.js'
